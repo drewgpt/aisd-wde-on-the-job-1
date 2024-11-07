@@ -109,3 +109,49 @@ footer ul li a:hover {
     text-decoration: underline;
 }
 
+#about-pictures {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+}
+
+#about-pictures img {
+    width: 330px;
+    height: auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #about-pictures {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    #about-pictures img {
+        width: 45%;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #about-pictures img {
+        width: 100%;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
